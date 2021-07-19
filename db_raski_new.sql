@@ -68,8 +68,7 @@ INSERT INTO `tb_produk` (`id_produk`, `nama_produk`, `stok`, `harga`, `gambar`) 
 (7, 'Cat Choize Kitten Tuna 1kg', 10, 25000, '690077790_ccPink.jpeg'),
 (8, 'Me-o Creamy Snack Salmon 15g x 4', 5, 22000, '1067698746_salmon.jpeg'),
 (9, 'Me-o Creamy Snack Tuna WIth Scallop 15g x 4', 5, 22000, '307266598_tuna.jpeg'),
-(10, 'Me-o Creamy Snack Bonito 15g x 4', 5, 22000, '1615226879_bonito.jpeg'),
-(16, 'Bakso Mie', 100, 15000, '20210117_120705.jpg');
+(10, 'Me-o Creamy Snack Bonito 15g x 4', 5, 22000, '1615226879_bonito.jpeg');
 
 -- --------------------------------------------------------
 

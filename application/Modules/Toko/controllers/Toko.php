@@ -51,8 +51,43 @@ class Toko extends CI_Controller
 
         if ($user) {
             if ($user['password'] == $password) {
+                if($user['role'] == 1){
+                    $data = [
+                        'email' => $user['email'],
+                        'role' => $user['role']
+                    ];
+                    $this->session->set_userdata($data);
+                    redirect('admin');
+                }else if($user['role'] == 2){
+                    $data = [
+                        'email' => $user['email'],
+                        'role' => $user['role']
+                    ];
+                    $this->session->set_userdata($data);
+                    redirect('toko');
+
+                }
+              
+            } else {
+                redirect('toko');
+            }
+        } else {
+            redirect('toko');
+        }
+    }
+
+    public function daftar()
+    {
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+        $nama = $this->input->post('nama');
+        $user = $this->db->get_where('user', ['email' => $email])->row_array();
+
+        if ($user) {
+            if ($user['password'] == $password) {
                 $data = [
                     'email' => $user['email'],
+                    'nama' => $user['nama'],
                     'role' => $user['role']
                 ];
                 $this->session->set_userdata($data);
@@ -64,6 +99,7 @@ class Toko extends CI_Controller
             redirect('toko');
         }
     }
+
     public function logout()
     {
         $this->session->unset_userdata('email');
@@ -86,4 +122,10 @@ class Toko extends CI_Controller
         }
         $this->load->view("keranjang", $data);
     }
+
+public function kontak()
+{
+    $data['title'] = "Raski Store | Halaman Awal";
+    $this->load->view("kontak", $data);
+}
 }

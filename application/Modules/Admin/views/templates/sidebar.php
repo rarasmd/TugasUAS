@@ -30,24 +30,14 @@
 
                 <li class="submenu">
                     <a href="">
-                        <i class="fas fa-photo-video"></i>
-                        <span> Slider </span>
-                    </a>
-                </li>
-
-                <li class="submenu">
-                    <a href="">
                         <i class="fas fa-chart-line"></i>
                         <span> Grafik Penjualan </span>
                     </a>
                 </li>
-
                 </li>
-
             </ul>
 
             <div class="clearfix"></div>
-
         </div>
 
         <div class="clearfix"></div>
